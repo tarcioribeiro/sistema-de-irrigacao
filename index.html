@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Irrigação</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Sistema de Irrigação Inteligente 🌱</h1>
+    <p class="subtitle">Monitoramento e automação para eficiência no uso da água</p>
+
+    <div class="top-row">
+      <div class="highlight-box">
+        <h2>Umidade do Solo</h2>
+        <p class="sub">Em tempo real</p>
+        <div class="highlight-value" id="umidade">--%</div>
+      </div>
+
+      <div class="chart-box">
+        <h2><strong>Gráfico</strong> de análise da umidade</h2>
+        <canvas id="graficoUmidade"></canvas>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="card">
+        <h2>Limiar de Umidade</h2>
+        <p class="sub">Nível mínimo</p>
+        <div class="value" id="limiar">--%</div>
+      </div>
+
+      <div class="card">
+        <h2>Tempo de Irrigação</h2>
+        <p class="sub">Em segundos</p>
+        <div class="value" id="tempo">-- seg</div>
+      </div>
+
+      <div class="card">
+        <h2>Status da Bomba</h2>
+        <p class="sub">Últimas ativações</p>
+        <div class="value" id="bomba">--</div>
+        <ul class="historico" id="historico">
+          <li>--</li>
+          <li>--</li>
+          <li>--</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
