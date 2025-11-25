@@ -42,11 +42,17 @@ async function atualizarDashboard() {
     const bombaLigada = ["ON", "on", "1", "true", "HIGH"].includes(bomba.trim());
     document.getElementById("bomba").innerText = bombaLigada ? "💧 Ligada" : "⛔ Desligada";
 
-    const horaAtual = new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
-    if (tempoData.length > 20) {
-      tempoData.shift();
-      umidadeData.shift();
+    // Atualiza gráfico com no máximo 18 pontos
+    const horaAtual = new Date().toLocaleTimeString("pt-BR", {
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+
+    if (tempoData.length >= 18) {
+      tempoData.shift();         // Remove o horário mais antigo
+      umidadeData.shift();       // Remove o valor correspondente
     }
+
     tempoData.push(horaAtual);
     umidadeData.push(parseInt(umidade));
     grafico.update();
