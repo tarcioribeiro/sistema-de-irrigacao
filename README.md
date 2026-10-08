@@ -35,3 +35,5 @@ Pablo Alexandre Silva, Samuel Silva, Sávio Martins, Silvio do Vale, Tarcio Ribe
 Orientadora: Profª Mariane de Paula da Silva Gonçalves Imbiriba
 
 Este projeto representa uma aplicação prática da Indústria 4.0 voltada para sustentabilidade e inovação tecnológica.
+
+Aprovado!
